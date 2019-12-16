@@ -13,7 +13,8 @@ import java.util.stream.Collectors;
 public class StatisticalCalculator {
 
     public static int getNumberOfTransactions() {
-        return DataContainer.transactionList.size();
+        DataContainer.numberOfTransactions = DataContainer.transactionList.size();
+        return DataContainer.numberOfTransactions;
     }
 
     public static int getProductNumberAverage() throws IOException {
@@ -44,7 +45,7 @@ public class StatisticalCalculator {
 
     public static float calculateSupport(List<String> products) {
         float containingTransactions = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
-        return containingTransactions / getNumberOfTransactions();
+        return containingTransactions / DataContainer.numberOfTransactions;
     }
 
     public static float calculateConfidence(List<String> products) {
@@ -54,20 +55,16 @@ public class StatisticalCalculator {
     }
 
     public static float calculateLift(List<String> products) {
-        return calculateConfidence(products) / calculateSupport(Arrays.asList(products.get(1)));
+        if(products.size() > 1) {
+            return calculateConfidence(products) / calculateSupport(Arrays.asList(products.get(1)));
+        }
+        else {
+            return 0;
+        }
     }
 
-    public static int calculateTransactionsNumber(List<String> products) {
+    public static int countTransactions(List<String> products) {
         return (int) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
-
-    }
-
-    public static List<ProductCollection> getFrequentOneElementCollections(float minValue){
-        return DataContainer.oneElementProductCollectionList.stream().filter(collection -> collection.getFrequency() >= minValue).collect(Collectors.toList());
-    }
-
-    public static List<ProductCollection> getNonFrequentOneElementCollections(float minValue){
-        return DataContainer.oneElementProductCollectionList.stream().filter(collection -> collection.getFrequency() < minValue).collect(Collectors.toList());
     }
 
 
@@ -90,6 +87,14 @@ public class StatisticalCalculator {
             }
         }
         return filteredCollections;
+    }
+
+    public static List<ProductCollection> displayThreeGreatestSupportLevels() {
+        List<ProductCollection> threeCollections = new ArrayList<>();
+        for(int i=0; i < 3; i++) {
+            threeCollections.add(DataContainer.oneElementProductCollectionList.get(i));
+        }
+        return threeCollections;
     }
 
 }

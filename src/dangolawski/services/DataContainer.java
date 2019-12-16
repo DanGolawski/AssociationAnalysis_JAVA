@@ -5,10 +5,13 @@ import dangolawski.models.Relationship;
 import dangolawski.models.Transaction;
 
 import java.util.List;
+import java.util.Set;
 
 public class DataContainer {
 
-    public static final String csvFilePath = "C:/Users/User/Desktop/AssociationAnalysis_JAVA/src/dangolawski/dataset.csv";
+    public static int numberOfTransactions;
+
+    public static final String csvFilePath = "C:/Users/181535/Desktop/AssociationAnalysis_JAVA/src/dangolawski/dataset.csv";
 
     public static final float minSupport = (float) 0.01;
 
@@ -22,9 +25,11 @@ public class DataContainer {
 
     public static List<ProductCollection> threeElementProductCollectionList;
 
-    public static List<ProductCollection> frequentOneElemCollections;
+    public static List<ProductCollection> frequentOneElemCollectionList;
 
-    public static List<ProductCollection> nonFrequentOneElemCollections;
+    public static Set<String> frequentOneElemCollectionProducts;
+
+    public static List<ProductCollection> nonFrequentOneElemCollectionList;
 
     public static List<ProductCollection> frequentTwoElemCollections;
 

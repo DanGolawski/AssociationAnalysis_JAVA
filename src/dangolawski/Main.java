@@ -7,7 +7,6 @@ import dangolawski.services.DataFactory;
 import dangolawski.services.StatisticalCalculator;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -18,19 +17,29 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        DataFactory dataFactory = new DataFactory();
-        dataFactory.getData();
         // punkt 1
+        DataFactory.getTransactionsAndProductNames();
         System.out.println("Liczba wszystkich transakcji bez NONE : " + StatisticalCalculator.getNumberOfTransactions() + "\n");
+
         // punkt 2
         System.out.println("Srednia liczba elementow w transakcji : " + StatisticalCalculator.getProductNumberAverage() + "\n");
+
         // punkt 3
-        displayThreeGreatestSupportLevels();
+        DataFactory.createOneElementProductCollectionList();
+        System.out.println("Trzy zbiory jednoelementowe o największym poziomie wsparcia :");
+        DataContainer.oneElementProductCollectionList.sort(Comparator.comparing(ProductCollection::getSupport).reversed());
+        DataContainer.oneElementProductCollectionList.subList(0, 3).forEach(element -> System.out.println("zbior : " + element.getProducts() + " --- poziom wsparcia : " + element.getSupport() + " --- liczba transakcji : " + element.getTransactionsNumber()));
+
         // punkt 4
-        DataFactory.createListOfFrequentOneElementCollections();
-        System.out.println("Liczba jednoelementowych zbiorów częstych : " + DataContainer.frequentOneElemCollections.size() + "\n");
+        DataFactory.getFrequentOneElementCollectionList();
+        System.out.println("Liczba jednoelementowych zbiorów częstych : " + DataContainer.frequentOneElemCollectionList.size() + "\n");
+
+
+
+
         // punkt 5
-        DataFactory.createListOfFrequentTwoElementCollections();
+        DataFactory.createTwoElementProductCollectionList();
+        DataFactory.getFrequentTwoElementProductCollectionList();
         System.out.println("Liczba dwuelementowych zbiorów częstych : " + DataContainer.frequentTwoElemCollections.size() + "\n");
         // punkt 6
         displayThreeFrequentTwoElementCollections();
@@ -40,7 +49,7 @@ public class Main {
         // punkt 8, 9, 10, 11
         displayTwoElementRelationshipWithLargestSupport();
         // punkt 12
-        DataFactory.createThreeElementProductCollectionArray();
+//        DataFactory.createThreeElementProductCollectionArray();
 
     }
 
@@ -70,12 +79,5 @@ public class Main {
         System.out.println();
     }
 
-    private static void displayThreeGreatestSupportLevels() {
-        DataContainer.oneElementProductCollectionList.sort(Comparator.comparing(ProductCollection::getSupport).reversed());
-        System.out.println("Trzy zbiory jednoelementowe o największym poziomie wsparcia :");
-        for(int i=0; i < 3; i++) {
-            System.out.println("zbior : " + DataContainer.oneElementProductCollectionList.get(i).getProducts() + " - - - liczba transakcji : " + DataContainer.oneElementProductCollectionList.get(i).getTransactionsNumber());
-        }
-        System.out.println();
-    }
+
 }
