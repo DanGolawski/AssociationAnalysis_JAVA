@@ -69,25 +69,25 @@ public class StatisticalCalculator {
 
 
 
-    public static List<ProductCollection> getFrequentAndNonFrequentTwoElementCollections(List<ProductCollection> nonFrequentOneElemCollections, float minSupport) {
-        List<ProductCollection> filteredCollections = new ArrayList<>();
-        for (ProductCollection productCollection : DataContainer.twoElementProductCollectionList) {
-            boolean contains = true;
-            for(ProductCollection nonFrequentOneElementCollection : nonFrequentOneElemCollections){
-                if(productCollection.getProducts().containsAll(nonFrequentOneElementCollection.getProducts())){
-                    contains = false;
-                    break;
-                }
-            }
-            if(contains && productCollection.getSupport() >= minSupport){
-                filteredCollections.add(productCollection);
-            }
-            else{
-                DataContainer.nonFrequentTwoElemCollections.add(productCollection);
-            }
-        }
-        return filteredCollections;
-    }
+//    public static List<ProductCollection> getFrequentAndNonFrequentTwoElementCollections(List<ProductCollection> nonFrequentOneElemCollections, float minSupport) {
+//        List<ProductCollection> filteredCollections = new ArrayList<>();
+//        for (ProductCollection productCollection : DataContainer.twoElementProductCollectionList) {
+//            boolean contains = true;
+//            for(ProductCollection nonFrequentOneElementCollection : nonFrequentOneElemCollections){
+//                if(productCollection.getProducts().containsAll(nonFrequentOneElementCollection.getProducts())){
+//                    contains = false;
+//                    break;
+//                }
+//            }
+//            if(contains && productCollection.getSupport() >= minSupport){
+//                filteredCollections.add(productCollection);
+//            }
+//            else{
+//                DataContainer.nonFrequentTwoElemCollections.add(productCollection);
+//            }
+//        }
+//        return filteredCollections;
+//    }
 
     public static List<ProductCollection> displayThreeGreatestSupportLevels() {
         List<ProductCollection> threeCollections = new ArrayList<>();

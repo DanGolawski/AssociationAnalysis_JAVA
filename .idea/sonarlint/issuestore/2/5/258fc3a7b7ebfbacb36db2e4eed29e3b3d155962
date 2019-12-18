@@ -1,30 +1,33 @@
 
-V
-squid:S106A"9Replace this use of System.out or System.err by a logger.(€Îõˆ8Ý¤Ñ¡ð-
-Jsquid:S16124",Replace this lambda with a method reference.(éÈÓŠ8Ðñá¤ð-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(æš–•üÿÿÿÿ8¬ô•ôð-
+nsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(—‹Ïžûÿÿÿÿ8ÊÏ«ùð-
+isquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(Ý¨Þç8Ž°Éöð-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Óîüûÿÿÿÿ8Íµèôð-
 V
 squid:S106"9Replace this use of System.out or System.err by a logger.(™¾Šæ8ÔÌ—›ð-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(×ïççûÿÿÿÿ8Þê¢ð-
-[
-squid:S106!"9Replace this use of System.out or System.err by a logger.(ÙùØ§øÿÿÿÿ8ªéÁŸð-
 V
-squid:S106C"9Replace this use of System.out or System.err by a logger.(Ùæ´ä8Í«Ó¡ð-
-[
-squid:S106E"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8ÐÎß¡ð-
-Osquid:S1612/",Replace this lambda with a method reference.(µ×¬Úÿÿÿÿÿ8îÖ¤ð-
-[
-squid:S1065"9Replace this use of System.out or System.err by a logger.(‰”‰âùÿÿÿÿ8Ðñá¤ð-
-[
-squid:S106L"9Replace this use of System.out or System.err by a logger.(Ë¨Ÿ˜ùÿÿÿÿ8ÔÌ—›ð-
-[
-squid:S1060"9Replace this use of System.out or System.err by a logger.(›Ì Ìþÿÿÿÿ8÷ÚÎ¤ð-
-isquid:CommentedOutCodeLine*"<This block of commented-out lines of code should be removed.(Ä—‘ï8×¤¿¬ð-
-[
-squid:S106J"9Replace this use of System.out or System.err by a logger.(Óîüûÿÿÿÿ8ÔÌ—›ð-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(Çæž­ýÿÿÿÿ8ÔÌ—›ð-
+squid:S106I"9Replace this use of System.out or System.err by a logger.(ˆ€æÎ8Ž°Éöð-
+squid:UnusedPrivateMethodL"NRemove this unused private "displayThreeFrequentTwoElementCollections" method.(ÀÜåëøÿÿÿÿ8ÊÏ«ùð-
 V
-squid:S106<"9Replace this use of System.out or System.err by a logger.(ˆ€æÎ8›Åù¤ð-
+squid:S106N"9Replace this use of System.out or System.err by a logger.(€Îõˆ8Ž°Éöð-
+V
+squid:S106#"9Replace this use of System.out or System.err by a logger.(žˆã—8Ž°Éöð-
 [
-squid:S106N"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8ÔÌ—›ð-
+squid:S106="9Replace this use of System.out or System.err by a logger.(›Ì Ìþÿÿÿÿ8Ž°Éöð-
+V
+squid:S106P"9Replace this use of System.out or System.err by a logger.(Ùæ´ä8Ž°Éöð-
+[
+squid:S106R"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8Ž°Éöð-
+Osquid:S1612<",Replace this lambda with a method reference.(µ×¬Úÿÿÿÿÿ8Ž°Éöð-
+isquid:CommentedOutCodeLine'"<This block of commented-out lines of code should be removed.(ðà²¶8äðªùð-
+[
+squid:S106B"9Replace this use of System.out or System.err by a logger.(‰”‰âùÿÿÿÿ8Ž°Éöð-
+Jsquid:S1612A",Replace this lambda with a method reference.(éÈÓŠ8Ž°Éöð-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÊÓ¸8ÙÙ”õð-
+ˆsquid:UnusedPrivateMethod;"WRemove this unused private "displayTwoElementRelationshipWithLargestConfidence" method.(¢¾ë¥üÿÿÿÿ8¸ü«ùð-
+…squid:UnusedPrivateMethod@"TRemove this unused private "displayTwoElementRelationshipWithLargestSupport" method.(›ë©Ýùÿÿÿÿ8¸ü«ùð-
+nsquid:CommentedOutCodeLine2"<This block of commented-out lines of code should be removed.(ïÅŒ±úÿÿÿÿ8¸ü«ùð-
+isquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.( ŸÙ˜8¸ü«ùð-

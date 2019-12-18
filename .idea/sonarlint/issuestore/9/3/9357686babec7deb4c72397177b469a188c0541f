@@ -1,3 +1,8 @@
 
-nsquid:CommentedOutCodeLine1"<This block of commented-out lines of code should be removed.(ØÞÖ¡ýÿÿÿÿ8³íí ð-
-Xsquid:S1118":Add a private constructor to hide the implicit public one.(Šÿ ‰8™¬¦žð-
+jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8“ðòð-
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(Šÿ ‰8¶‰êôð-
+osquid:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(€ìÓ¼ûÿÿÿÿ8“ðòð-
+fsquid:UselessImportCheck";Remove this unused import 'dangolawski.models.Transaction'.(õéñÇ8¸Òðôð-
+hsquid:UselessImportCheck"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8Êú‰óð-
+osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(‘µÿÖøÿÿÿÿ8“ðòð-
+isquid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(±¨¼8•²¦ùð-

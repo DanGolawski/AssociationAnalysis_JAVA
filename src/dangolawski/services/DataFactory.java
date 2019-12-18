@@ -52,21 +52,25 @@ public class DataFactory {
     public static void createOneElementProductCollectionList() {
         DataContainer.oneElementProductCollectionList = new ArrayList<>();
         for(String product : DataContainer.productNames) {
-            DataContainer.oneElementProductCollectionList.add(createNewProductCollection(new ArrayList<>(Arrays.asList(product))));
+            DataContainer.oneElementProductCollectionList.add(createNewProductCollection(new ArrayList<>(Collections.singletonList(product))));
         }
     }
 
     public static void createTwoElementProductCollectionList() {
         DataContainer.twoElementProductCollectionList = new ArrayList<>();
-        for(String productX : DataContainer.frequentOneElemCollectionProducts) {
-            for(String productY : DataContainer.frequentOneElemCollectionProducts) {
-                if(productX.equals(productY)){ continue; }
-                DataContainer.twoElementProductCollectionList.add(createNewProductCollection(new ArrayList<>(Arrays.asList(productX, productY))));
+        for(ProductCollection productCollection1 : DataContainer.frequentOneElemCollectionList) {
+            for(ProductCollection productCollection2 : DataContainer.frequentOneElemCollectionList) {
+                if(!productCollection1.getProducts().get(0).equals(productCollection2.getProducts().get(0))) {
+                    DataContainer.twoElementProductCollectionList.add(createNewProductCollection(Arrays.asList(
+                            productCollection1.getProducts().get(0),
+                            productCollection2.getProducts().get(0)
+                    )));
+                }
             }
         }
     }
 
-    private static ProductCollection createNewProductCollection(ArrayList<String> products) {
+    private static ProductCollection createNewProductCollection(List<String> products) {
         ProductCollection productCollection = new ProductCollection(products);
         productCollection.setSupport(StatisticalCalculator.calculateSupport(products));
         productCollection.setConfidence(StatisticalCalculator.calculateConfidence(products));
@@ -77,107 +81,43 @@ public class DataFactory {
 
     public static void getFrequentOneElementCollectionList() {
         DataContainer.frequentOneElemCollectionList = DataContainer.oneElementProductCollectionList.stream().filter(collection -> collection.getSupport() >= DataContainer.minSupport).collect(Collectors.toList());
-        getFrequentProducts();
     }
 
-    public static void getFrequentTwoElementCollectionList() {
-        
+    public static void getFrequentAndNonFrequentTwoElementCollectionList() {
+        DataContainer.frequentTwoElemCollectionList = DataContainer.twoElementProductCollectionList.stream().filter(collection -> collection.getSupport() >= DataContainer.minSupport).collect(Collectors.toList());
+        DataContainer.nonFrequentTwoElemCollectionList = DataContainer.twoElementProductCollectionList.stream().filter(collection -> collection.getSupport() < DataContainer.minSupport).collect(Collectors.toList());
     }
 
-    private static void getFrequentProducts(){
-        DataContainer.frequentOneElemCollectionProducts = new TreeSet<>();
-        DataContainer.frequentOneElemCollectionList.forEach(collection -> {
-            collection.getProducts().forEach(productName -> DataContainer.frequentOneElemCollectionProducts.add(productName));
-        });
+    public static void displayThreeTwoElementFrequentCollections() {
+        ArrayList<List<String>> products = new ArrayList<>();
+        int counter = 0;
+        DataContainer.frequentTwoElemCollectionList.sort(Comparator.comparing(ProductCollection::getSupport).reversed());
+        System.out.println("Trzy dwuelementowe zbiory czeste :");
+        for(ProductCollection productCollection : DataContainer.frequentTwoElemCollectionList) {
+            if(!productsAppeared(products, productCollection.getProducts())) { continue; }
+            System.out.println("zbior : " + productCollection.getProducts() + " --- wsparcie : " + productCollection.getSupport() + " --- liczba transakcji : " + productCollection.getTransactionsNumber());
+            counter += 1;
+            products.add(productCollection.getProducts());
+            if(counter == 3) { break; }
+        }
+        System.out.println();
     }
 
-
-
-//    public static void createThreeElementProductCollectionArray() {
-//        List<List<String>> nonFrequentProducts = getNonFrequentProducts();
-//        DataContainer.threeElementProductCollectionList = new ArrayList<>();
-//        for(int a = 0; a < DataContainer.productNames.size(); a++) {
-//            for(int b = a; b < DataContainer.productNames.size(); b++) {
-//                for(int c = b; c < DataContainer.productNames.size(); c++) {
-//                    ArrayList<String> products = new ArrayList<>();
-//                    products.add(DataContainer.productNames.get(a));
-//                    products.add(DataContainer.productNames.get(b));
-//                    products.add(DataContainer.productNames.get(c));
-//                    if(!nonFrequentProducts.containsAll(products)){
-//                        ProductCollection newProductCollection = new ProductCollection(products);
-//                        newProductCollection.setSupport(StatisticalCalculator.calculateSupport(products));
-//                        newProductCollection.setTransactionsNumber(StatisticalCalculator.countTransactions(products));
-//                        DataContainer.threeElementProductCollectionList.add(newProductCollection);
-//                    }
-//                }
-//            }
-//        }
-//    }
-
-//    private static List<List<String>> getNonFrequentProducts(){
-//        List<List<String>> nonFrequentProducts = new ArrayList<>();
-//        System.out.println(DataContainer.nonFrequentOneElemCollections);
-//        for(ProductCollection productCollection : DataContainer.nonFrequentOneElemCollections){
-//            nonFrequentProducts.add(productCollection.getProducts());
-//        }
-//        for(ProductCollection productCollection : DataContainer.nonFrequentTwoElemCollections){
-//            nonFrequentProducts.add(productCollection.getProducts());
-//            nonFrequentProducts.add(productCollection.getProducts());
-//        }
-//        return nonFrequentProducts;
-//    }
-
-    private static boolean checkWhetherContains(ArrayList<String> productNames){
-        boolean contains = false;
-        for(ProductCollection productCollection : DataContainer.frequentTwoElemCollections){
-            if(productNames.containsAll(productCollection.getProducts())){
-                return true;
+    private static boolean productsAppeared(ArrayList<List<String>> products, List<String> currentCollection) {
+        boolean notAppeared = true;
+        for(List<String> list : products) {
+            if(list.containsAll(currentCollection)){
+                notAppeared = false;
+                break;
             }
         }
-        return false;
+        return notAppeared;
     }
 
-//    public static void createListOfFrequentOneElementCollections() {
-//        DataContainer.frequentOneElemCollections = new ArrayList<>();
-//        DataContainer.nonFrequentOneElemCollections = new ArrayList<>();
-//        DataContainer.frequentOneElemCollections = StatisticalCalculator.getFrequentOneElementCollections(DataContainer.minSupport);
-//        DataContainer.nonFrequentOneElemCollections = StatisticalCalculator.getNonFrequentOneElementCollections(DataContainer.minSupport);
-//    }
-
-//    public static void createListOfFrequentTwoElementCollections() {
-//        DataContainer.frequentTwoElemCollections = new ArrayList<>();
-//        DataContainer.nonFrequentTwoElemCollections = new ArrayList<>();
-//        DataContainer.frequentTwoElemCollections = StatisticalCalculator.getFrequentAndNonFrequentTwoElementCollections(DataContainer.nonFrequentOneElemCollections, DataContainer.minSupport);
-//    }
-
-    public static void createTwoElementRelationshipsBasedOnFrequentLists() {
-        DataContainer.twoElementRelationshipList = new ArrayList<>();
-        for(ProductCollection productCollection : DataContainer.frequentTwoElemCollections) {
-            Relationship relationship = new Relationship(productCollection.getProducts());
-            List<String> reversedProducts = reverseList(productCollection.getProducts());
-            Relationship relationshipReversed = new Relationship(reversedProducts);
-            setRelationshipAttributesAndAddToList(relationship, productCollection.getProducts());
-            setRelationshipAttributesAndAddToList(relationshipReversed, reversedProducts);
-        }
-
-    }
-
-    public static List<String> reverseList(List<String> products) {
-        List<String> reversedList = new ArrayList<>();
-        for(int i = products.size()-1; i >= 0; i--) {
-            reversedList.add(products.get(i));
-        }
-        return reversedList;
-    }
-
-    private static void setRelationshipAttributesAndAddToList(Relationship relationship, List<String> products) {
-        relationship.setSupport(StatisticalCalculator.calculateSupport(products));
-        relationship.setConfidence(StatisticalCalculator.calculateConfidence(products));
-        relationship.setLift(StatisticalCalculator.calculateLift(products));
-        DataContainer.twoElementRelationshipList.add(relationship);
-    }
-
-    public void createThreeElementRelationshipsBasedOnFrequentLists() {
-
+    public static void displayCollectionWithTheBiggestSupportLevel() {
+        System.out.println("Silna reguła o największym współczynniku zaufania :");
+        ProductCollection selectedCollection =  Collections.max(DataContainer.frequentTwoElemCollectionList, Comparator.comparing(ProductCollection::getConfidence));
+        System.out.println("zbior : " + selectedCollection.getProducts() + " --- wspolczynnik zaufania : " + selectedCollection.getConfidence() + " --- liczba transakcji : " + selectedCollection.getTransactionsNumber());
+        System.out.println();
     }
 }

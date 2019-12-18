@@ -27,15 +27,17 @@ public class DataContainer {
 
     public static List<ProductCollection> frequentOneElemCollectionList;
 
-    public static Set<String> frequentOneElemCollectionProducts;
+//    public static Set<String> frequentOneElemCollectionProducts;
 
     public static List<ProductCollection> nonFrequentOneElemCollectionList;
 
-    public static List<ProductCollection> frequentTwoElemCollections;
+    public static List<ProductCollection> frequentTwoElemCollectionList;
 
-    public static List<ProductCollection> nonFrequentTwoElemCollections;
+//    public static Set<String> frequentTwoElemCollectionProducts;
 
-    public static List<ProductCollection> frequentThreeElemCollections;
+    public static List<ProductCollection> nonFrequentTwoElemCollectionList;
+
+//    public static List<ProductCollection> frequentThreeElemCollections;
 
     public static List<Relationship> twoElementRelationshipList;
 
