@@ -46,10 +46,14 @@ public class Main {
         // punkt 8, 9, 10, 11
         StatisticalCalculator.displayCollectionWithTheLargestSupportLevel();
 
-        System.out.println(DataContainer.twoElementProductCollectionList.size());
 
-
-
+        for(ProductCollection pc : DataContainer.frequentTwoElemCollectionList) {
+            System.out.println(pc.getProducts());
+            System.out.println("zaufanie : " + pc.getConfidence());
+            System.out.println("wsparcie : " + pc.getSupport());
+            System.out.println("lift : " + pc.getLift());
+            System.out.println();
+        }
 
 
         // punkt 12

@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c3026b-b586-4ab3-9001-dda52d6b2014" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258fc3a7b7ebfbacb36db2e4eed29e3b3d155962" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258fc3a7b7ebfbacb36db2e4eed29e3b3d155962" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/9057f455cecc71e62e91c69e099c1701b47527f3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/9057f455cecc71e62e91c69e099c1701b47527f3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9357686babec7deb4c72397177b469a188c0541f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9357686babec7deb4c72397177b469a188c0541f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java" afterDir="false" />
     </list>
@@ -31,13 +29,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1V3qtCRsybuKEWpJBrACYrxZkPk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576331687340" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../messageWithAttachmentSender" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -135,6 +135,18 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java</url>
+          <line>51</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="DataContainer.nonFrequentTwoElemCollections.get(100)" />

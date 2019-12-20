@@ -11,9 +11,9 @@ public class DataContainer {
 
     public static int numberOfTransactions;
 
-    public static final String csvFilePath = "C:/Users/181535/Desktop/AssociationAnalysis_JAVA/src/dangolawski/dataset.csv";
+    public static final String csvFilePath = "C:/Users/181535/Desktop/AssociationAnalysis_JAVA/src/dangolawski/dataset_test.csv";
 
-    public static final float minSupport = (float) 0.01;
+    public static final float minSupport = (float) 0.00;
 
     public static List<Transaction> transactionList;
 

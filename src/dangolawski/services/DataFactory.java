@@ -71,6 +71,7 @@ public class DataFactory {
     }
 
     private static ProductCollection createNewProductCollection(List<String> products) {
+        System.out.println(products);
         ProductCollection productCollection = new ProductCollection(products);
         productCollection.setSupport(StatisticalCalculator.calculateSupport(products));
         productCollection.setConfidence(StatisticalCalculator.calculateConfidence(products));

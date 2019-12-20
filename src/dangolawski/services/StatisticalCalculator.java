@@ -49,9 +49,6 @@ public class StatisticalCalculator {
     }
 
     public static float calculateConfidence(List<String> products) {
-        if(products.size() == 2){
-            System.out.println("_____________________________" + products);
-        }
         float trasnactionsContainingBothProducts = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
         float trasnactionsContainingFirstProduct = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(Arrays.asList(products.get(0)))).count();
         return trasnactionsContainingBothProducts / trasnactionsContainingFirstProduct;
@@ -116,7 +113,7 @@ public class StatisticalCalculator {
         ProductCollection foundCollection = DataContainer.frequentTwoElemCollectionList.stream().
                 filter(collection -> collection.getProducts().equals(reverseArray(supportProductCollection.getProducts()))).
                 findAny().orElse(null);
-        System.out.println("zbior : " + foundCollection.getProducts() + " --- wspolczynnik zaufania : " + foundCollection.getSupport() + " --- wsparcie : " + foundCollection.getSupport() + " --- lift : " + foundCollection.getLift());
+        System.out.println("zbior : " + foundCollection.getProducts() + " --- wspolczynnik zaufania : " + foundCollection.getConfidence() + " --- wsparcie : " + foundCollection.getSupport() + " --- lift : " + foundCollection.getLift());
         System.out.println("SPRAWDZIC WYLICZENIA DLA CONFIDENCE !!!!!!!!!!!!!!!");
     }
 
