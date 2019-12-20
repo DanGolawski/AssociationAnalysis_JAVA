@@ -6,6 +6,7 @@ import dangolawski.services.DataFactory;
 import dangolawski.services.StatisticalCalculator;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
@@ -37,19 +38,20 @@ public class Main {
         System.out.println("Liczba dwuelementowych zbiorów częstych (X=>Y) oraz (Y=>X) : " + DataContainer.frequentTwoElemCollectionList.size() + " (support = " + DataContainer.minSupport + ")" + "\n");
 
         // punkt 6 Trzy dwuelementowe zbiory częste
-        DataFactory.displayThreeTwoElementFrequentCollections();
+        StatisticalCalculator.displayThreeTwoElementFrequentCollections();
 
         // punkt 7 Silna reguła o największym współczynniku zaufania
-        DataFactory.displayCollectionWithTheBiggestSupportLevel();
-
-
-
-
-
-
+        StatisticalCalculator.displayCollectionWithTheLargestConfidenceLevel();
 
         // punkt 8, 9, 10, 11
-//        displayTwoElementRelationshipWithLargestSupport();
+        StatisticalCalculator.displayCollectionWithTheLargestSupportLevel();
+
+        System.out.println(DataContainer.twoElementProductCollectionList.size());
+
+
+
+
+
         // punkt 12
 //        DataFactory.createThreeElementProductCollectionArray();
 

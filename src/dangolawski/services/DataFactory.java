@@ -88,36 +88,5 @@ public class DataFactory {
         DataContainer.nonFrequentTwoElemCollectionList = DataContainer.twoElementProductCollectionList.stream().filter(collection -> collection.getSupport() < DataContainer.minSupport).collect(Collectors.toList());
     }
 
-    public static void displayThreeTwoElementFrequentCollections() {
-        ArrayList<List<String>> products = new ArrayList<>();
-        int counter = 0;
-        DataContainer.frequentTwoElemCollectionList.sort(Comparator.comparing(ProductCollection::getSupport).reversed());
-        System.out.println("Trzy dwuelementowe zbiory czeste :");
-        for(ProductCollection productCollection : DataContainer.frequentTwoElemCollectionList) {
-            if(!productsAppeared(products, productCollection.getProducts())) { continue; }
-            System.out.println("zbior : " + productCollection.getProducts() + " --- wsparcie : " + productCollection.getSupport() + " --- liczba transakcji : " + productCollection.getTransactionsNumber());
-            counter += 1;
-            products.add(productCollection.getProducts());
-            if(counter == 3) { break; }
-        }
-        System.out.println();
-    }
 
-    private static boolean productsAppeared(ArrayList<List<String>> products, List<String> currentCollection) {
-        boolean notAppeared = true;
-        for(List<String> list : products) {
-            if(list.containsAll(currentCollection)){
-                notAppeared = false;
-                break;
-            }
-        }
-        return notAppeared;
-    }
-
-    public static void displayCollectionWithTheBiggestSupportLevel() {
-        System.out.println("Silna reguła o największym współczynniku zaufania :");
-        ProductCollection selectedCollection =  Collections.max(DataContainer.frequentTwoElemCollectionList, Comparator.comparing(ProductCollection::getConfidence));
-        System.out.println("zbior : " + selectedCollection.getProducts() + " --- wspolczynnik zaufania : " + selectedCollection.getConfidence() + " --- liczba transakcji : " + selectedCollection.getTransactionsNumber());
-        System.out.println();
-    }
 }

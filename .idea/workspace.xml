@@ -8,11 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java" afterDir="false" />
     </list>

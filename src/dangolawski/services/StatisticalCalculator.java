@@ -49,6 +49,9 @@ public class StatisticalCalculator {
     }
 
     public static float calculateConfidence(List<String> products) {
+        if(products.size() == 2){
+            System.out.println("_____________________________" + products);
+        }
         float trasnactionsContainingBothProducts = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
         float trasnactionsContainingFirstProduct = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(Arrays.asList(products.get(0)))).count();
         return trasnactionsContainingBothProducts / trasnactionsContainingFirstProduct;
@@ -67,34 +70,58 @@ public class StatisticalCalculator {
         return (int) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
     }
 
-
-
-//    public static List<ProductCollection> getFrequentAndNonFrequentTwoElementCollections(List<ProductCollection> nonFrequentOneElemCollections, float minSupport) {
-//        List<ProductCollection> filteredCollections = new ArrayList<>();
-//        for (ProductCollection productCollection : DataContainer.twoElementProductCollectionList) {
-//            boolean contains = true;
-//            for(ProductCollection nonFrequentOneElementCollection : nonFrequentOneElemCollections){
-//                if(productCollection.getProducts().containsAll(nonFrequentOneElementCollection.getProducts())){
-//                    contains = false;
-//                    break;
-//                }
-//            }
-//            if(contains && productCollection.getSupport() >= minSupport){
-//                filteredCollections.add(productCollection);
-//            }
-//            else{
-//                DataContainer.nonFrequentTwoElemCollections.add(productCollection);
-//            }
-//        }
-//        return filteredCollections;
-//    }
-
-    public static List<ProductCollection> displayThreeGreatestSupportLevels() {
-        List<ProductCollection> threeCollections = new ArrayList<>();
-        for(int i=0; i < 3; i++) {
-            threeCollections.add(DataContainer.oneElementProductCollectionList.get(i));
+    public static void displayThreeTwoElementFrequentCollections() {
+        ArrayList<List<String>> products = new ArrayList<>();
+        int counter = 0;
+        DataContainer.frequentTwoElemCollectionList.sort(Comparator.comparing(ProductCollection::getSupport).reversed());
+        System.out.println("Trzy dwuelementowe zbiory czeste :");
+        for(ProductCollection productCollection : DataContainer.frequentTwoElemCollectionList) {
+            if(!productsAppeared(products, productCollection.getProducts())) { continue; }
+            System.out.println("zbior : " + productCollection.getProducts() + " --- wsparcie : " + productCollection.getSupport() + " --- liczba transakcji : " + productCollection.getTransactionsNumber());
+            counter += 1;
+            products.add(productCollection.getProducts());
+            if(counter == 3) { break; }
         }
-        return threeCollections;
+        System.out.println();
     }
 
+    private static boolean productsAppeared(ArrayList<List<String>> products, List<String> currentCollection) {
+        boolean notAppeared = true;
+        for(List<String> list : products) {
+            if(list.containsAll(currentCollection)){
+                notAppeared = false;
+                break;
+            }
+        }
+        return notAppeared;
+    }
+
+    public static void displayCollectionWithTheLargestConfidenceLevel() {
+        System.out.println("Silna reguła o największym współczynniku zaufania :");
+        ProductCollection selectedCollection =  Collections.max(DataContainer.frequentTwoElemCollectionList, Comparator.comparing(ProductCollection::getConfidence));
+        System.out.println("zbior : " + selectedCollection.getProducts() + " --- wspolczynnik zaufania : " + selectedCollection.getConfidence() + " --- liczba transakcji : " + selectedCollection.getTransactionsNumber());
+        System.out.println();
+    }
+
+    public static void displayCollectionWithTheLargestSupportLevel() {
+        System.out.println("Reguła o największym poziomie wsparcia :");
+        ProductCollection selectedCollection =  Collections.max(DataContainer.frequentTwoElemCollectionList, Comparator.comparing(ProductCollection::getSupport));
+        System.out.println("zbior : " + selectedCollection.getProducts() + " --- wspolczynnik zaufania : " + selectedCollection.getSupport() + " --- wsparcie : " + selectedCollection.getSupport() + " --- lift : " + selectedCollection.getLift());
+        System.out.println();
+        displayCollectionWithReversedListOfProducts(selectedCollection);
+    }
+
+    private static void displayCollectionWithReversedListOfProducts(ProductCollection supportProductCollection) {
+        System.out.println("Reguła o odwróconej kolejności elementów :");
+        ProductCollection foundCollection = DataContainer.frequentTwoElemCollectionList.stream().
+                filter(collection -> collection.getProducts().equals(reverseArray(supportProductCollection.getProducts()))).
+                findAny().orElse(null);
+        System.out.println("zbior : " + foundCollection.getProducts() + " --- wspolczynnik zaufania : " + foundCollection.getSupport() + " --- wsparcie : " + foundCollection.getSupport() + " --- lift : " + foundCollection.getLift());
+        System.out.println("SPRAWDZIC WYLICZENIA DLA CONFIDENCE !!!!!!!!!!!!!!!");
+    }
+
+    public static List<String> reverseArray(List<String> products) {
+        Collections.reverse(products);
+        return products;
+    }
 }

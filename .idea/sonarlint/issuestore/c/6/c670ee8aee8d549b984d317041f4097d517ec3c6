@@ -1,12 +1,5 @@
 
-Isquid:S1172X"&Remove these unused method parameters.(Ëîöüÿÿÿÿ8£ıÒùğ-
-nsquid:CommentedOutCodeLinev"<This block of commented-out lines of code should be removed.(ÙÓŸøÿÿÿÿ8ºÆ‰öğ-
-esquid:UnusedPrivateMethodƒ"9Remove this unused private "checkWhetherContains" method.(çÃÅh8ºÆ‰öğ-
-jsquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(Ä“‘³8ºÆ‰öğ-
-¥squid:S1186µ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦»Æ‰úÿÿÿÿ8ºÆ‰öğ-
-Osquid:S1602Z",Remove useless curly braces around statement(ÑÈ„úÿÿÿÿ8ïæÌùğ-
-osquid:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(€ìÓ¼ûÿÿÿÿ8§İÂ…ğ-
-osquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(„âó£ÿÿÿÿÿ8ºÆ‰öğ-
 osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(‘µÿÖøÿÿÿÿ8ì•è„ğ-
-Lsquid:S1481„"-Remove this unused "contains" local variable.(’‚êŒ8ºÆ‰öğ-
-nsquid:CommentedOutCodeLinea"<This block of commented-out lines of code should be removed.(ªêğ„ıÿÿÿÿ8ºÆ‰öğ-
+lsquid:UselessImportCheck"<Remove this unused import 'dangolawski.models.Relationship'.(§ÏÁ—úÿÿÿÿ8¦‘øÇñ-
+]squid:S1118":Add a private constructor to hide the implicit public one.(œêÙæıÿÿÿÿ8®ôßÊñ-
+osquid:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(€ìÓ¼ûÿÿÿÿ8§İÂ…ğ-
