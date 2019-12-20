@@ -17,7 +17,7 @@ public class StatisticalCalculator {
         return DataContainer.numberOfTransactions;
     }
 
-    public static int getProductNumberAverage() throws IOException {
+    public static float getProductNumberAverage() throws IOException {
         BufferedReader csvReader = new BufferedReader(new FileReader(DataContainer.csvFilePath));
         String row;
         String currentTransactionNum = "1";
@@ -38,6 +38,7 @@ public class StatisticalCalculator {
             }
 
         }
+        productNumberSum += productNumber;
         csvReader.close();
 
         return productNumberSum / transactionCounter;
@@ -56,7 +57,7 @@ public class StatisticalCalculator {
 
     public static float calculateLift(List<String> products) {
         if(products.size() > 1) {
-            return calculateConfidence(products) / calculateSupport(Arrays.asList(products.get(1)));
+            return calculateConfidence(products) / calculateSupport(Arrays.asList(products.get(products.size()-1)));
         }
         else {
             return 0;
@@ -74,7 +75,7 @@ public class StatisticalCalculator {
         System.out.println("Trzy dwuelementowe zbiory czeste :");
         for(ProductCollection productCollection : DataContainer.frequentTwoElemCollectionList) {
             if(!productsAppeared(products, productCollection.getProducts())) { continue; }
-            System.out.println("zbior : " + productCollection.getProducts() + " --- wsparcie : " + productCollection.getSupport() + " --- liczba transakcji : " + productCollection.getTransactionsNumber());
+            System.out.println("zbior : " + productCollection.getProducts() + " --- wsparcie : " + productCollection.getSupport() + " --- wsp. zaufania : " + productCollection.getConfidence() + " --- liczba transakcji : " + productCollection.getTransactionsNumber());
             counter += 1;
             products.add(productCollection.getProducts());
             if(counter == 3) { break; }
@@ -114,11 +115,13 @@ public class StatisticalCalculator {
                 filter(collection -> collection.getProducts().equals(reverseArray(supportProductCollection.getProducts()))).
                 findAny().orElse(null);
         System.out.println("zbior : " + foundCollection.getProducts() + " --- wspolczynnik zaufania : " + foundCollection.getConfidence() + " --- wsparcie : " + foundCollection.getSupport() + " --- lift : " + foundCollection.getLift());
-        System.out.println("SPRAWDZIC WYLICZENIA DLA CONFIDENCE !!!!!!!!!!!!!!!");
     }
 
     public static List<String> reverseArray(List<String> products) {
-        Collections.reverse(products);
-        return products;
+        List<String> reversedList = new ArrayList<>();
+        for(int i = products.size()-1; i >= 0; i--) {
+            reversedList.add(products.get(i));
+        }
+        return reversedList;
     }
 }

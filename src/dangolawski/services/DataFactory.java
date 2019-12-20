@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 public class DataFactory {
 
+
     public static void getTransactionsAndProductNames() throws IOException {
         DataContainer.transactionList = new ArrayList<>();
         Set<String> productNames = new TreeSet<>();
@@ -70,8 +71,59 @@ public class DataFactory {
         }
     }
 
+    public static void createThreeElementProductCollectionList() {
+        List<List<String>> products = new ArrayList<>();
+        for(ProductCollection oneElemCol : DataContainer.frequentOneElemCollectionList) {
+            for(ProductCollection twoElemCol : DataContainer.frequentTwoElemCollectionList) {
+                if(!twoElemCol.getProducts().contains(oneElemCol.getProducts())){
+                    ArrayList<String> newList = new ArrayList<>(twoElemCol.getProducts());
+                    newList.addAll(oneElemCol.getProducts());
+                    products.add(newList);
+                }
+            }
+        }
+        products.removeIf(DataFactory::listContainsNonFrequentProducts);
+
+        createCollectionsFromPermutations(products);
+
+    }
+
+    private static boolean listContainsNonFrequentProducts(List<String> list) {
+        boolean doesNotContain = true;
+        for(ProductCollection productCollection : DataContainer.nonFrequentTwoElemCollectionList) {
+            if(list.containsAll(productCollection.getProducts())) {
+                doesNotContain = false;
+                break;
+            }
+        }
+        return doesNotContain;
+    }
+
+    private static void createCollectionsFromPermutations(List<List<String>> listOfLists) {
+        Set<List<String>> set = new HashSet<>();
+        for(List<String> list : listOfLists) {
+            set.addAll(getPermutations(list));
+        }
+        for(List<String> s : set){
+            System.out.println("TTTT   " + s);
+        }
+    }
+
+    private static List<List<String>> getPermutations(List<String> list) {
+        List<List<String>> permutations = new ArrayList<>();
+        for(int a = 0; a < 3; a++) {
+            for(int b = 0; b < 3; b++) {
+                if(b == a) { continue; }
+                for(int c = 0; c < 3; c++) {
+                    if(c == b || c == a){ continue; }
+                    permutations.add(Arrays.asList(list.get(a), list.get(b), list.get(c)));
+                }
+            }
+        }
+        return permutations;
+    }
+
     private static ProductCollection createNewProductCollection(List<String> products) {
-        System.out.println(products);
         ProductCollection productCollection = new ProductCollection(products);
         productCollection.setSupport(StatisticalCalculator.calculateSupport(products));
         productCollection.setConfidence(StatisticalCalculator.calculateConfidence(products));
