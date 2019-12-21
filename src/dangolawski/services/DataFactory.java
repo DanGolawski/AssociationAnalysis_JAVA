@@ -2,6 +2,7 @@ package dangolawski.services;
 
 import dangolawski.models.ProductCollection;
 import dangolawski.models.Relationship;
+import dangolawski.models.ThreeElemProductCollection;
 import dangolawski.models.Transaction;
 
 import java.io.BufferedReader;
@@ -100,12 +101,13 @@ public class DataFactory {
     }
 
     private static void createCollectionsFromPermutations(List<List<String>> listOfLists) {
+        DataContainer.threeElementProductCollectionList = new ArrayList<>();
         Set<List<String>> set = new HashSet<>();
         for(List<String> list : listOfLists) {
             set.addAll(getPermutations(list));
         }
         for(List<String> s : set){
-            System.out.println("TTTT   " + s);
+            DataContainer.threeElementProductCollectionList.add(createNewThreeElemProductCollection(new ArrayList<String>(s)));
         }
     }
 
@@ -130,6 +132,17 @@ public class DataFactory {
         productCollection.setLift(StatisticalCalculator.calculateLift(products));
         productCollection.setTransactionsNumber(StatisticalCalculator.countTransactions(products));
         return productCollection;
+    }
+
+    private static ThreeElemProductCollection createNewThreeElemProductCollection(List<String> products) {
+        ThreeElemProductCollection threeElemProductCollection = new ThreeElemProductCollection(products);
+        threeElemProductCollection.setSupport(StatisticalCalculator.calculateSupport(products));
+        threeElemProductCollection.setConfidenceA_BC(StatisticalCalculator.calculateConfidence(products));
+        threeElemProductCollection.setConfidenceA_BC(StatisticalCalculator.calculateConfidenceAB_C(products));
+        threeElemProductCollection.setLiftA_BC(StatisticalCalculator.calculateLiftA_BC(products));
+        threeElemProductCollection.setLiftAB_C(StatisticalCalculator.calculateLiftAB_C(products));
+        threeElemProductCollection.setTransactionsNumber(StatisticalCalculator.countTransactions(products));
+        return threeElemProductCollection;
     }
 
     public static void getFrequentOneElementCollectionList() {

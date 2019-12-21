@@ -1,33 +1,26 @@
 
-¢"squid:ClassVariableVisibilityCheck,"hMake threeElementRelationShipList a static final constant or non-public and provide accessors if needed.(ó§Ù©øÿÿÿÿ8â“Æ¥ð-
-isquid:S1444&"FMake this "public static nonFrequentTwoElemCollectionList" field final(¶ÆË×ûÿÿÿÿ8•§«Éñ-
-isquid:CommentedOutCodeLine$"<This block of commented-out lines of code should be removed.(£Ø®Þ8ŠãÇñ-
-’"squid:ClassVariableVisibilityCheck"XMake productNames a static final constant or non-public and provide accessors if needed.(ÿÂ’óúÿÿÿÿ8Ô«¢óð-
-£"squid:ClassVariableVisibilityCheck""iMake frequentTwoElemCollectionList a static final constant or non-public and provide accessors if needed.(ÌÛÒÎúÿÿÿÿ8À»¹Èñ-
-›"squid:ClassVariableVisibilityCheck*"fMake twoElementRelationshipList a static final constant or non-public and provide accessors if needed.(‡ë²§8ì¼Ä¥ð-
-jsquid:S1444"GMake this "public static threeElementProductCollectionList" field final(çòŒÞúÿÿÿÿ8Èÿ ¬ð-
-dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(…’”Öøÿÿÿÿ8Ó‰Õ›ð-
-]squid:S1444":Make this "public static numberOfTransactions" field final(€µž›ùÿÿÿÿ8ûé”öð-
-š"squid:ClassVariableVisibilityCheck"`Make numberOfTransactions a static final constant or non-public and provide accessors if needed.(€µž›ùÿÿÿÿ8ûé”öð-
- "squid:ClassVariableVisibilityCheck"kMake oneElementProductCollectionList a static final constant or non-public and provide accessors if needed.(¨´‰Æ8««áŠð-
-esquid:S1444,"BMake this "public static threeElementRelationShipList" field final(ó§Ù©øÿÿÿÿ8â“Æ¥ð-
-•"squid:ClassVariableVisibilityCheck"[Make transactionList a static final constant or non-public and provide accessors if needed.(ðšðôÿÿÿÿÿ8««áŠð-
-fsquid:S1444""CMake this "public static frequentTwoElemCollectionList" field final(ÌÛÒÎúÿÿÿÿ8À»¹Èñ-
-¦"squid:ClassVariableVisibilityCheck "lMake nonFrequentOneElemCollectionList a static final constant or non-public and provide accessors if needed.(ÅÓèöÿÿÿÿÿ8‰š¦Éñ-
-nsquid:CommentedOutCodeLine("<This block of commented-out lines of code should be removed.(ë¼–€ùÿÿÿÿ8—£ãÇñ-
-isquid:S1444 "FMake this "public static nonFrequentOneElemCollectionList" field final(ÅÓèöÿÿÿÿÿ8‰š¦Éñ-
-¥"squid:ClassVariableVisibilityCheck"kMake twoElementProductCollectionList a static final constant or non-public and provide accessors if needed.(£žˆµùÿÿÿÿ8ƒ»¨›ð-
-hsquid:S1444"EMake this "public static twoElementProductCollectionList" field final(£žˆµùÿÿÿÿ8ƒ»¨›ð-
-`squid:S1444"CMake this "public static frequentOneElemCollectionList" field final(ÀË€X8ç¡æÇñ-
-^squid:S1444*"@Make this "public static twoElementRelationshipList" field final(‡ë²§8ì¼Ä¥ð-
-§"squid:ClassVariableVisibilityCheck"mMake threeElementProductCollectionList a static final constant or non-public and provide accessors if needed.(çòŒÞúÿÿÿÿ8Èÿ ¬ð-
-"squid:ClassVariableVisibilityCheck"iMake frequentOneElemCollectionList a static final constant or non-public and provide accessors if needed.(ÀË€X8ç¡æÇñ-
 Xsquid:S1444"5Make this "public static transactionList" field final(ðšðôÿÿÿÿÿ8««áŠð-
-~squid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(…’”Öøÿÿÿÿ8Ò½Õ›ð-
+hsquid:S1444"EMake this "public static twoElementProductCollectionList" field final(£žˆµùÿÿÿÿ8ƒ»¨›ð-
+ysquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¨¿´‚8Ò½Õ›ð-
+_squid:S1075"ARefactor your code to get this URI from a customizable parameter.(¨¿´‚8Ó‰Õ›ð-
+’"squid:ClassVariableVisibilityCheck"XMake productNames a static final constant or non-public and provide accessors if needed.(ÿÂ’óúÿÿÿÿ8Ô«¢óð-
 Xsquid:S1118
 ":Add a private constructor to hide the implicit public one.(Ê›§ž8î—Â¢ð-
+ "squid:ClassVariableVisibilityCheck"kMake oneElementProductCollectionList a static final constant or non-public and provide accessors if needed.(¨´‰Æ8««áŠð-
 ysquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ú„÷8è¡×›ð-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‚ïÎ©8‡¿âÇñ-
-¦"squid:ClassVariableVisibilityCheck&"lMake nonFrequentTwoElemCollectionList a static final constant or non-public and provide accessors if needed.(¶ÆË×ûÿÿÿÿ8–§«Éñ-
+]squid:S1444":Make this "public static numberOfTransactions" field final(€µž›ùÿÿÿÿ8ûé”öð-
+lsquid:UselessImportCheck"<Remove this unused import 'dangolawski.models.Relationship'.(§ÏÁ—úÿÿÿÿ8ëù®¦ò-
+¥"squid:ClassVariableVisibilityCheck"kMake twoElementProductCollectionList a static final constant or non-public and provide accessors if needed.(£žˆµùÿÿÿÿ8ƒ»¨›ð-
+š"squid:ClassVariableVisibilityCheck"`Make numberOfTransactions a static final constant or non-public and provide accessors if needed.(€µž›ùÿÿÿÿ8ûé”öð-
+•"squid:ClassVariableVisibilityCheck"[Make transactionList a static final constant or non-public and provide accessors if needed.(ðšðôÿÿÿÿÿ8««áŠð-
+"squid:ClassVariableVisibilityCheck"iMake frequentOneElemCollectionList a static final constant or non-public and provide accessors if needed.(ÀË€X8ç¡æÇñ-
+jsquid:S1444"GMake this "public static threeElementProductCollectionList" field final(çòŒÞúÿÿÿÿ8Èÿ ¬ð-
+fsquid:S1444"CMake this "public static frequentTwoElemCollectionList" field final(ÌÛÒÎúÿÿÿÿ8À»¹Èñ-
 csquid:S1444"EMake this "public static oneElementProductCollectionList" field final(¨´‰Æ8««áŠð-
+§"squid:ClassVariableVisibilityCheck"mMake threeElementProductCollectionList a static final constant or non-public and provide accessors if needed.(çòŒÞúÿÿÿÿ8Èÿ ¬ð-
 Usquid:S1444"2Make this "public static productNames" field final(ÿÂ’óúÿÿÿÿ8Ô«¢óð-
+`squid:S1444"CMake this "public static frequentOneElemCollectionList" field final(ÀË€X8ç¡æÇñ-
+£"squid:ClassVariableVisibilityCheck"iMake frequentTwoElemCollectionList a static final constant or non-public and provide accessors if needed.(ÌÛÒÎúÿÿÿÿ8À»¹Èñ-
+Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Set'.(ö²„¤þÿÿÿÿ8Æ•®¦ò-
+isquid:S1444 "FMake this "public static nonFrequentTwoElemCollectionList" field final(¶ÆË×ûÿÿÿÿ8îÅÃ¦ò-
+¦"squid:ClassVariableVisibilityCheck "lMake nonFrequentTwoElemCollectionList a static final constant or non-public and provide accessors if needed.(¶ÆË×ûÿÿÿÿ8îÅÃ¦ò-

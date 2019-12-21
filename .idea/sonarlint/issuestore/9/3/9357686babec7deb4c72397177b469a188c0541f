@@ -1,39 +1,36 @@
 
-[
-squid:S106f"9Replace this use of System.out or System.err by a logger.(‰±Œİúÿÿÿÿ8ĞÊ’Ìñ-
-osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(‘µÿÖøÿÿÿÿ8“ğòğ-
-[
-squid:S106w"9Replace this use of System.out or System.err by a logger.(Ù»ºàûÿÿÿÿ8ßì°Íñ-
-lsquid:S1192P"IDefine a constant instead of duplicating this literal "zbior : " 4 times.(³¼ÜËüÿÿÿÿ8’ó¦Ìñ-
+osquid:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(€ìÓ¼ûÿÿÿÿ8“ğòğ-
 V
-squid:S1065"9Replace this use of System.out or System.err by a logger.(¬Ş8”¡ŠÎñ-
-fsquid:UselessImportCheck";Remove this unused import 'dangolawski.models.Transaction'.(õéñÇ8¸Òğôğ-
-tsquid:S1192P"QDefine a constant instead of duplicating this literal " --- wsparcie : " 3 times.(³¼ÜËüÿÿÿÿ8ßì°Íñ-
-[
-squid:S106g"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ĞÊ’Ìñ-
-jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8“ğòğ-
-V
-squid:S106m"9Replace this use of System.out or System.err by a logger.(†ŒÆ‡8’ó¦Ìñ-
-{
-squid:S135N"YReduce the total number of break and continue statements in this loop to use at most one.(³¡ÚÎÿÿÿÿÿ8²È—Ìñ-
+squid:S106K"9Replace this use of System.out or System.err by a logger.(Šï8ÖìÅ¢ò-
 hsquid:UselessImportCheck"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8Êú‰óğ-
 V
-squid:S106M"9Replace this use of System.out or System.err by a logger.(Šï8²È—Ìñ-
-osquid:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(€ìÓ¼ûÿÿÿÿ8“ğòğ-
+squid:S106k"9Replace this use of System.out or System.err by a logger.(†ŒÆ‡8’ó¦Ìñ-
+jsquid:UselessImportCheck":Remove this unused import 'java.io.FileNotFoundException'.(·î™ùÿÿÿÿ8“ğòğ-
+gsquid:S1192N"IDefine a constant instead of duplicating this literal "zbior : " 4 times.(­ñœ8’ó¦Ìñ-
+ksquid:S2259u"MA "NullPointerException" could be thrown; "foundCollection" is nullable here.(–Å‘§8ÖìÅ¢ò-
 [
-squid:S106U"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8²È—Ìñ-
-psquid:S2259w"MA "NullPointerException" could be thrown; "foundCollection" is nullable here.(Ù»ºàûÿÿÿÿ8ïÂ±Íñ-
+squid:S106e"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ĞÊ’Ìñ-
+V
+squid:S106N"9Replace this use of System.out or System.err by a logger.(­ñœ8²È—Ìñ-
+V
+squid:S106u"9Replace this use of System.out or System.err by a logger.(–Å‘§8ÖìÅ¢ò-
+osquid:S2095"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(‘µÿÖøÿÿÿÿ8“ğòğ-
+osquid:S1192N"QDefine a constant instead of duplicating this literal " --- wsparcie : " 3 times.(­ñœ8ßì°Íñ-
+{
+squid:S135L"YReduce the total number of break and continue statements in this loop to use at most one.(³¡ÚÎÿÿÿÿÿ8²È—Ìñ-
+V
+squid:S106b"9Replace this use of System.out or System.err by a logger.(ÅØÜâ8ÖìÅ¢ò-
+dsquid:S2184,"ACast one of the operands of this division operation to a "float".(“ÅÎöüÿÿÿÿ8‹“Ç¢ò-
 [
-squid:S106n"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8à‡«Ìñ-
+squid:S106i"9Replace this use of System.out or System.err by a logger.(•ûøèùÿÿÿÿ8ÖìÅ¢ò-
+squid:S1192d"^Define a constant instead of duplicating this literal " --- wspolczynnik zaufania : " 3 times.(‰±Œİúÿÿÿÿ8ßì°Íñ-
+fsquid:UselessImportCheck";Remove this unused import 'dangolawski.models.Transaction'.(õéñÇ8¸Òğôğ-
+[
+squid:S106l"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ö’£Ìñ-
+V
+squid:S106q"9Replace this use of System.out or System.err by a logger.(”Á›¢8–½Ìñ-
+[
+squid:S106S"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ĞÊ’Ìñ-
+[
+squid:S106d"9Replace this use of System.out or System.err by a logger.(‰±Œİúÿÿÿÿ8ĞÊ’Ìñ-
 Xsquid:S1118":Add a private constructor to hide the implicit public one.(Šÿ ‰8¶‰êôğ-
-[
-squid:S106P"9Replace this use of System.out or System.err by a logger.(³¼ÜËüÿÿÿÿ8²È—Ìñ-
-V
-squid:S106s"9Replace this use of System.out or System.err by a logger.(”Á›¢8–½Ìñ-
-V
-squid:S106d"9Replace this use of System.out or System.err by a logger.(ÅØÜâ8ĞÊ’Ìñ-
-[
-squid:S106k"9Replace this use of System.out or System.err by a logger.(•ûøèùÿÿÿÿ8ö’£Ìñ-
-squid:S1192f"^Define a constant instead of duplicating this literal " --- wspolczynnik zaufania : " 3 times.(‰±Œİúÿÿÿÿ8ßì°Íñ-
-V
-squid:S106x"9Replace this use of System.out or System.err by a logger.(´şæ’8¹”ºÍñ-

@@ -1,6 +1,7 @@
 package dangolawski.services;
 
 import dangolawski.models.ProductCollection;
+import dangolawski.models.ThreeElemProductCollection;
 import dangolawski.models.Transaction;
 
 import java.io.BufferedReader;
@@ -55,6 +56,12 @@ public class StatisticalCalculator {
         return trasnactionsContainingBothProducts / trasnactionsContainingFirstProduct;
     }
 
+    public static float calculateConfidenceAB_C(List<String> products) {
+        float trasnactionsContainingBothProducts = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products)).count();
+        float trasnactionsContainingFirstProduct = (float) DataContainer.transactionList.stream().filter(transaction -> transaction.productsInTransaction(products.subList(0,2))).count();
+        return trasnactionsContainingBothProducts / trasnactionsContainingFirstProduct;
+    }
+
     public static float calculateLift(List<String> products) {
         if(products.size() > 1) {
             return calculateConfidence(products) / calculateSupport(Arrays.asList(products.get(products.size()-1)));
@@ -62,6 +69,14 @@ public class StatisticalCalculator {
         else {
             return 0;
         }
+    }
+
+    public static float calculateLiftA_BC(List<String> products) {
+        return calculateConfidence(products) / calculateSupport(products.subList(1, 3));
+    }
+
+    public static float calculateLiftAB_C(List<String> products) {
+        return calculateConfidenceAB_C(products) / calculateSupport(Arrays.asList(products.get(products.size()-1)));
     }
 
     public static int countTransactions(List<String> products) {
@@ -123,5 +138,19 @@ public class StatisticalCalculator {
             reversedList.add(products.get(i));
         }
         return reversedList;
+    }
+
+    public static void displayTwoThreeElemCollectionA_BCwithTheLathestSupport() {
+        System.out.println();
+        System.out.println("Reguły zbudowane 3 elementów o największym poziomie wsparcia :");
+        DataContainer.threeElementProductCollectionList.sort(Comparator.comparing(ThreeElemProductCollection::getSupport).reversed());
+        for(int i = 0; i < 12; i++) {
+            ThreeElemProductCollection col = DataContainer.threeElementProductCollectionList.get(i);
+            System.out.println("zbior : " + col.getProducts() + " --- support = " + col.getSupport() + " --- liczba transakcji = " + col.getTransactionsNumber());
+            System.out.println("confidence A_BC = " + col.getConfidenceA_BC() + " --- confidenceAB_C = " + col.getConfidenceAB_C());
+            System.out.println("liftA_BC = " + col.getLiftA_BC() + " --- liftAB_C = " + col.getLiftAB_C());
+            System.out.println();
+            System.out.println("SPRAWDZIĆ OBLICZENIA DLA CONFIDENCE AB_C !!!!!!!!!!!!!!!!!!!!!!!");
+        }
     }
 }

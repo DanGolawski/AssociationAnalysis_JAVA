@@ -6,7 +6,6 @@ import dangolawski.services.DataFactory;
 import dangolawski.services.StatisticalCalculator;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Comparator;
 
 public class Main {
@@ -48,8 +47,7 @@ public class Main {
 
         // punkt 12
         DataFactory.createThreeElementProductCollectionList();
-
-
+        StatisticalCalculator.displayTwoThreeElemCollectionA_BCwithTheLathestSupport();
     }
 
 }

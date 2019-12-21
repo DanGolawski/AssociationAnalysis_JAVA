@@ -2,6 +2,7 @@ package dangolawski.services;
 
 import dangolawski.models.ProductCollection;
 import dangolawski.models.Relationship;
+import dangolawski.models.ThreeElemProductCollection;
 import dangolawski.models.Transaction;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class DataContainer {
 
     public static List<ProductCollection> twoElementProductCollectionList;
 
-    public static List<ProductCollection> threeElementProductCollectionList;
+    public static List<ThreeElemProductCollection> threeElementProductCollectionList;
 
     public static List<ProductCollection> frequentOneElemCollectionList;
 
