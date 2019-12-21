@@ -150,7 +150,6 @@ public class StatisticalCalculator {
             System.out.println("confidence A_BC = " + col.getConfidenceA_BC() + " --- confidenceAB_C = " + col.getConfidenceAB_C());
             System.out.println("liftA_BC = " + col.getLiftA_BC() + " --- liftAB_C = " + col.getLiftAB_C());
             System.out.println();
-            System.out.println("SPRAWDZIĆ OBLICZENIA DLA CONFIDENCE AB_C !!!!!!!!!!!!!!!!!!!!!!!");
         }
     }
 }

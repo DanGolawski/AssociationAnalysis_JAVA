@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c3026b-b586-4ab3-9001-dda52d6b2014" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa3bcbf2d701363707b8c3256b536e0207901d37" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/models/ThreeElemProductCollection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dangolawski/models/ThreeElemProductCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258fc3a7b7ebfbacb36db2e4eed29e3b3d155962" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/258fc3a7b7ebfbacb36db2e4eed29e3b3d155962" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/9057f455cecc71e62e91c69e099c1701b47527f3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/9057f455cecc71e62e91c69e099c1701b47527f3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9357686babec7deb4c72397177b469a188c0541f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9357686babec7deb4c72397177b469a188c0541f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c670ee8aee8d549b984d317041f4097d517ec3c6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataContainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/DataFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AssociationAnalysis_JAVA/dangolawski/services/StatisticalCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dangolawski/services/DataFactory.java" afterDir="false" />
@@ -99,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="147" column="98" selection-start-line="147" selection-start-column="98" selection-end-line="147" selection-end-column="98" />
+            <state relative-caret-position="443">
+              <caret line="152" column="96" selection-start-line="152" selection-start-column="96" selection-end-line="152" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -203,7 +210,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576922639201" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576922877434" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -280,16 +287,15 @@
       <workItem from="1576346961785" duration="53000" />
       <workItem from="1576394820180" duration="9077000" />
       <workItem from="1576861667596" duration="13470000" />
-      <workItem from="1576918052771" duration="4576000" />
+      <workItem from="1576918052771" duration="4843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59582000" />
+    <option name="totallyTimeSpent" value="59849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -300,7 +306,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,8 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dangolawski/services/StatisticalCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="147" column="98" selection-start-line="147" selection-start-column="98" selection-end-line="147" selection-end-column="98" />
+        <state relative-caret-position="443">
+          <caret line="152" column="96" selection-start-line="152" selection-start-column="96" selection-end-line="152" selection-end-column="96" />
         </state>
       </provider>
     </entry>

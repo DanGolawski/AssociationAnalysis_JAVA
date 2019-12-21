@@ -17,3 +17,5 @@ X
 (src/dangolawski/models/Relationship.java,f\1\f1fc027269366579e6ba2294ec9bdd52dac36ec6
 P
  src/dangolawski/dataset_test.csv,f\a\fa3bcbf2d701363707b8c3256b536e0207901d37
+f
+6src/dangolawski/models/ThreeElemProductCollection.java,e\0\e0ab0e9b6b701096b2526de4956ef5db8ce7fe0d

@@ -138,7 +138,7 @@ public class DataFactory {
         ThreeElemProductCollection threeElemProductCollection = new ThreeElemProductCollection(products);
         threeElemProductCollection.setSupport(StatisticalCalculator.calculateSupport(products));
         threeElemProductCollection.setConfidenceA_BC(StatisticalCalculator.calculateConfidence(products));
-        threeElemProductCollection.setConfidenceA_BC(StatisticalCalculator.calculateConfidenceAB_C(products));
+        threeElemProductCollection.setConfidenceAB_C(StatisticalCalculator.calculateConfidenceAB_C(products));
         threeElemProductCollection.setLiftA_BC(StatisticalCalculator.calculateLiftA_BC(products));
         threeElemProductCollection.setLiftAB_C(StatisticalCalculator.calculateLiftAB_C(products));
         threeElemProductCollection.setTransactionsNumber(StatisticalCalculator.countTransactions(products));
